@@ -34,6 +34,8 @@ def initialize_cbioportal():
 ### Process Studies
 The script processes studies listed in [study_ids.txt](study_ids.txt) and combines frequency data from CSV files in the `Frecuencias` folder.
 
+The variables `num_cancer_studies` and `num_genes_per_study` control the number of studies and the number of genes, respectively.
+
 ```py
 if __name__ == '__main__':
     cbioportal = initialize_cbioportal()
@@ -47,8 +49,8 @@ if __name__ == '__main__':
     os.makedirs('Frecuencias', exist_ok=True)
     eliminar_archivos_carpeta('Frecuencias')
 
-    num_cancer_studies = 1000
-    num_genes_per_study = None
+    num_cancer_studies = 1000 # 1000 si quiero todos los estudios
+    num_genes_per_study = None #None si quiero todos los genes
 
     study_ids = study_ids[:num_cancer_studies]
 
