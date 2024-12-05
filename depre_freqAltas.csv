@@ -1,0 +1,16 @@
+Type,Gene,MutSig(Q-value),# Mut,#,Profiled Samples,Frecuencia (%)
+Depresion,NEGR1,,,,644533,48.00
+Depresion,DRD2,,,,266815,19.87
+Depresion,TRAF3,,,,171670,12.78
+Depresion,CCDC71,,,,110453,8.23
+Depresion,FADS1,,,,71066,5.29
+Depresion,SPPL3,,,,45724,3.41
+Depresion,LAMB2,,,,29419,2.19
+Depresion,FAM120A,,,,18928,1.41
+Depresion,ZNF165,,,,12178,0.91
+Depresion,HIST1H1B,,,,7836,0.58
+Depresion,ZSCAN12,,,,5041,0.38
+Depresion,TMEM161B,,,,3244,0.24
+Depresion,PGBD1,,,,2087,0.16
+Depresion,ZNF184,,,,1343,0.10
+Depresion,L3MBTL2,,,,1343,0.10
