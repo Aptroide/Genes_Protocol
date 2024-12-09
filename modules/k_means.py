@@ -6,18 +6,28 @@ import plotly.graph_objects as go
 import numpy as np
 import pandas as pd
 
-def c_kmeans(d_data):
-  wcss=[]
-  for i in range(1,6):
-      kmeans=KMeans(n_clusters=i, init='k-means++',random_state=42)
-      kmeans.fit(d_data)
-      wcss.append(kmeans.inertia_)
+def c_kmeans(d_data, dim_red_name):
+    """
+    Plot the Elbow Method for KMeans clustering.
 
-  plt.plot(range(1,6),wcss)
-  plt.title('The Elbow Method')
-  plt.xlabel('Number of Clusters')
-  plt.ylabel('WCSS')
-  plt.show()
+    Parameters:
+    d_data : array-like
+        The data to cluster
+    dim_red_name : str
+        The name of the dimension reduction method used
+    """
+    
+    wcss=[]
+    for i in range(1,6):
+        kmeans=KMeans(n_clusters=i, init='k-means++',random_state=42)
+        kmeans.fit(d_data)
+        wcss.append(kmeans.inertia_)
+
+    plt.plot(range(1,6),wcss)
+    plt.title('The Elbow Method for '+dim_red_name)
+    plt.xlabel('Number of Clusters')
+    plt.ylabel('WCSS')
+    plt.show()
 
 def plot_kmeans_silhouette_plotly(proj_2d, df_transpuesto, range_n_clusters):
     """
